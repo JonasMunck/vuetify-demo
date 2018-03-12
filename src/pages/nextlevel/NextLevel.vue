@@ -2,7 +2,11 @@
   <v-container>
     <v-layout row>
       <div class="display-1">Next level</div>
-      <posts :posts="posts" />
+    </v-layout>
+    <v-layout row justify-center>
+      <v-flex xs4>
+        <posts :posts="posts" />
+      </v-flex>
     </v-layout>
   </v-container>
 </template>
