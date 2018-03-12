@@ -9,6 +9,7 @@
             label="Username"
             v-model="username" />
           <!-- end of where things happen -->
+          <greeting />
 
         </v-flex>
       </v-layout>
@@ -17,17 +18,16 @@
 </template>
 
 <script>
+import Greeting from '@/components/Greeting'
 export default {
+  components: {
+    Greeting
+  },
+
   data () {
     return {
       msg: 'Hello World!',
       username: ''
-    }
-  },
-
-  computed: {
-    upperCaseUsername () {
-      return this.username.toUpperCase()
     }
   }
 }
