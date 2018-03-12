@@ -6,7 +6,7 @@
         label="Username"
         v-model="username" />
 
-      Hi {{ transformUsername() }}, hope you have a nice day!
+      Hi {{ upperCaseUsername }}, hope you have a nice day!
 
     </v-container>
   </v-app>
@@ -21,8 +21,8 @@ export default {
     }
   },
 
-  methods: {
-    transformUsername () {
+  computed: {
+    upperCaseUsername () {
       return this.username.toUpperCase()
     }
   }
