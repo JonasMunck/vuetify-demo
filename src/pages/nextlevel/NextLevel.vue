@@ -25,12 +25,7 @@ export default {
   },
 
   async created () {
-    setTimeout(() => {
-      // await does not work within setTimeout,
-      // therefore promise based syntax is used here
-      this.fetchPosts().then(d => (this.posts = d))
-    }, 5000)
-
+    this.posts = await this.fetchPosts()
   },
 
   methods: {
