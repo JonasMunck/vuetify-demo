@@ -8,15 +8,8 @@
           <v-text-field
             label="Username"
             v-model="username" />
-
-          <div v-if="username !== ''">
-            Hi {{ upperCaseUsername }}, hope you have a nice day!
-          </div>
-          <div v-else>
-            Please specify your username
-          </div>
-
           <!-- end of where things happen -->
+
         </v-flex>
       </v-layout>
     </v-container>
