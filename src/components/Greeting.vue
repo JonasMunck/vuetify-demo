@@ -1,5 +1,5 @@
 <template>
-  <div v-if="username !== ''">
+  <div v-if="validUsername">
     Hi {{ username }}, hope you have a nice day!
   </div>
   <div v-else>
@@ -9,7 +9,13 @@
 
 <script>
 export default {
-  props: ['username']
+  props: ['username'],
+
+  computed: {
+    validUsername () {
+      return this.username && this.username.length > 0
+    }
+  }
 }
 </script>
 
