@@ -2,13 +2,18 @@
   <v-container>
     <v-layout row>
       <div class="display-1">Next level</div>
-      {{ posts }}
+      <posts :posts="posts" />
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import Posts from './components/Posts';
 export default {
+  components: {
+    Posts
+  },
+
   data () {
     return {
       posts: null
