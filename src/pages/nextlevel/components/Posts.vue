@@ -1,10 +1,16 @@
 <template>
-  <div>{{posts}}</div>
+  <div>
+    <div v-for="post in posts" :key="post.id">
+      <post :post="post" />
+    </div>
+  </div>
 </template>
 
 <script>
+import Post from './Post'
 export default {
-  props: ['posts']
+  props: ['posts'],
+  components: { Post }
 }
 </script>
 
