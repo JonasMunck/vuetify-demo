@@ -9,7 +9,7 @@
             label="Username"
             v-model="username" />
           <!-- end of where things happen -->
-          <greeting />
+          <greeting v-bind:username="username"/>
 
         </v-flex>
       </v-layout>
