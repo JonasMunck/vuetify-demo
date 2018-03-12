@@ -9,7 +9,12 @@
             label="Username"
             v-model="username" />
 
-          Hi {{ upperCaseUsername }}, hope you have a nice day!
+          <div v-if="username !== ''">
+            Hi {{ upperCaseUsername }}, hope you have a nice day!
+          </div>
+          <div v-else>
+            Please specify your username
+          </div>
 
           <!-- end of where things happen -->
         </v-flex>
