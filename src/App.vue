@@ -1,13 +1,19 @@
 <template>
   <v-app>
     <v-container>
+      <v-layout row>
+        <v-flex xs2>
 
-      <v-text-field
-        label="Username"
-        v-model="username" />
+          <!-- where things happen -->
+          <v-text-field
+            label="Username"
+            v-model="username" />
 
-      Hi {{ upperCaseUsername }}, hope you have a nice day!
+          Hi {{ upperCaseUsername }}, hope you have a nice day!
 
+          <!-- end of where things happen -->
+        </v-flex>
+      </v-layout>
     </v-container>
   </v-app>
 </template>
