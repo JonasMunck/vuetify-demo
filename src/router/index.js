@@ -8,8 +8,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'home',
+      component: require('@/pages/home/Home').default
+    },
+    {
+      path: '/next-level',
+      name: 'next-level',
+      component: require('@/pages/nextlevel/NextLevel').default
     }
   ]
 })
