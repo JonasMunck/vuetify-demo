@@ -10,6 +10,13 @@
         <!-- end of where things happen -->
         <greeting v-bind:username="username"/>
 
+        <v-btn
+          @click="navToNextLevel"
+        >
+          To Next level
+        </v-btn>
+
+
       </v-flex>
     </v-layout>
   </v-container>
@@ -26,6 +33,12 @@ export default {
     return {
       msg: 'Hello World!',
       username: ''
+    }
+  },
+
+  methods: {
+    navToNextLevel () {
+      this.$router.push({name: 'next-level'})
     }
   }
 }
