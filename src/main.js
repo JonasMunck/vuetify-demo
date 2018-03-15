@@ -19,6 +19,9 @@ let axiosInstance = axios.create({
 
 Vue.http = Vue.prototype.$http = axiosInstance
 
+const store = require('./state').default
+Vue.store = Vue.prototype.$store = store
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -1,5 +1,11 @@
 <template>
   <div>
+    <v-btn
+      @click="incrementCounter"
+    >
+      Increment
+    </v-btn>
+
     <div v-for="p in extractions" :key="p.participant">
       <div class="display-1">{{p.participant}}</div>
       <div>{{ p.orders }}</div>
@@ -34,7 +40,12 @@ export default Vue.extend({
     extractions (): Participation[] {
       return partitions(this.orders)
     }
+  },
 
+  methods: {
+    incrementCounter (): void {
+      this.$store.commit('increment')
+    }
   }
 })
 
