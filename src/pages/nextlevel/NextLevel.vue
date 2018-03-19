@@ -11,9 +11,11 @@
   </v-container>
 </template>
 
-<script>
-import Posts from './components/Posts';
-export default {
+<script lang="ts">
+import Vue from 'vue'
+import Posts from './components/Posts.vue'
+
+export default Vue.extend({
   components: {
     Posts
   },
@@ -29,13 +31,13 @@ export default {
   },
 
   methods: {
-    async fetchPosts () {
+    async fetchPosts (): Promise<any> {
       let response = await this.$http.get('https://jsonplaceholder.typicode.com/posts')
       console.log(response)
       return response.data
     }
   }
-}
+})
 </script>
 
 <style>

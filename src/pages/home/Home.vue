@@ -31,12 +31,15 @@
   </v-container>
 </template>
 
-<script>
-import Greeting from '@/components/Greeting'
+<script lang="ts">
+import Vue from 'vue'
+import Greeting from '@/components/Greeting.vue'
 import BbDatePicker from '@/components/trading/BbDatePicker.vue'
 import AutoComplete from '@/components/trading/AutoComplete.vue'
 import DebouncedInput from '@/components/trading/DebouncedInput.vue'
-export default {
+import { Post } from '../../state/posts/types'
+
+export default Vue.extend({
   components: {
     Greeting,
     BbDatePicker,
@@ -54,12 +57,12 @@ export default {
 
   methods: {
     navToNextLevel () {
-      this.$router.push({name: 'next-level'})
+      // this.$router.push({name: 'next-level'})
     },
 
-    handleSearch (posts) {
-      this.posts = posts
+    handleSearch (posts: Post[]): void {
+      // this.posts = posts
     }
   }
-}
+})
 </script>

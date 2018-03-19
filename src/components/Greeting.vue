@@ -7,13 +7,15 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 export default {
   props: ['username'],
 
   computed: {
-    validUsername () {
-      return this.username && this.username.length > 0
+    validUsername (): boolean {
+      return true
+      // return this.username && this.username.length > 0
     }
   }
 }

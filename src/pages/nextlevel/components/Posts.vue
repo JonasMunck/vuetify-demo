@@ -9,12 +9,14 @@
   </div>
 </template>
 
-<script>
-import Post from './Post'
-export default {
+<script lang="ts">
+import Vue from 'vue'
+import Post from './Post.vue'
+
+export default Vue.extend({
   props: ['posts'],
   components: { Post }
-}
+})
 </script>
 
 <style>

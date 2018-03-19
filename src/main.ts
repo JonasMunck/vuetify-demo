@@ -2,11 +2,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Vuex from 'vuex'
-import App from './App.vue'
+import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
-import axios from 'axios'
+import axios, { AxiosInstance } from 'axios'
 
 Vue.use(Vuex)
 Vue.use(Vuetify)
@@ -17,10 +17,13 @@ let axiosInstance = axios.create({
   baseURL: 'http://localhost:8000'
 })
 
-Vue.http = Vue.prototype.$http = axiosInstance
+Vue.prototype.$http = axiosInstance
 
-const store = require('./state').default
-Vue.store = Vue.prototype.$store = store
+
+// const store = require('./state').default
+import store from './state'
+Vue.prototype.$store = store
+// Vue.store = store
 
 /* eslint-disable no-new */
 new Vue({
