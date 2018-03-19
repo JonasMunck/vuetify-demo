@@ -1,5 +1,14 @@
 <template>
   <v-container>
+
+    <debounced-input />
+
+    <auto-complete v-on:input="handleSearch"/>
+
+    posts: {{ posts }}
+
+    <bb-date-picker />
+
     <v-layout row>
       <v-flex xs2>
 
@@ -24,21 +33,32 @@
 
 <script>
 import Greeting from '@/components/Greeting'
+import BbDatePicker from '@/components/trading/BbDatePicker.vue'
+import AutoComplete from '@/components/trading/AutoComplete.vue'
+import DebouncedInput from '@/components/trading/DebouncedInput.vue'
 export default {
   components: {
-    Greeting
+    Greeting,
+    BbDatePicker,
+    AutoComplete,
+    DebouncedInput
   },
 
   data () {
     return {
       msg: 'Hello World!',
-      username: ''
+      username: '',
+      posts: null
     }
   },
 
   methods: {
     navToNextLevel () {
       this.$router.push({name: 'next-level'})
+    },
+
+    handleSearch (posts) {
+      this.posts = posts
     }
   }
 }
