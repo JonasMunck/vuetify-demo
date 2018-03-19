@@ -51,17 +51,17 @@ export default Vue.extend({
     return {
       msg: 'Hello World!',
       username: '',
-      posts: null
+      posts: [{}]
     }
   },
 
   methods: {
     navToNextLevel () {
-      // this.$router.push({name: 'next-level'})
+      this.$router.push({name: 'next-level'})
     },
 
     handleSearch (posts: Post[]): void {
-      // this.posts = posts
+      this.posts = posts
     }
   }
 })

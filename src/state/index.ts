@@ -5,6 +5,8 @@ import { posts } from './posts';
 import { actions } from './actions';
 import { mutations } from './mutations';
 
+Vue.use(Vuex)
+
 const state: RootState = {
     count: 0,
     caseNumber: ''

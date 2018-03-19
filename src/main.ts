@@ -8,7 +8,6 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import axios, { AxiosInstance } from 'axios'
 
-// Vue.use(Vuex)
 Vue.use(Vuetify)
 
 Vue.config.productionTip = false
@@ -20,9 +19,8 @@ let axiosInstance = axios.create({
 Vue.prototype.$http = axiosInstance
 
 
-// const store = require('./state').default
-// import store from './state'
-// Vue.prototype.$store = store
+import store from './state'
+Vue.prototype.$store = store
 // Vue.store = store
 
 /* eslint-disable no-new */
