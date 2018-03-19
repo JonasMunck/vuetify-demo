@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import TryTp from '@/pages/trytp/TryTp.vue'
+// import TryTp from '@/pages/trytp/TryTp.vue'
 import NextLevel from '@/pages/nextlevel/NextLevel.vue'
 import Home from '@/pages/home/Home.vue'
 
@@ -18,10 +18,10 @@ export default new Router({
       name: 'next-level',
       component: NextLevel
     },
-    {
-      path: '/try-typ',
-      name: 'try-typ',
-      component: TryTp
-    }
+    // {
+    //   path: '/try-typ',
+    //   name: 'try-typ',
+    //   component: TryTp
+    // }
   ]
 })
