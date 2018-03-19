@@ -86,7 +86,7 @@ export default Vue.extend({
 
   methods: {
     searchQueryAndyResponse(query: string): QueryAndResponse {
-      return {query, response: axios.get(this.queryUrl + query)}
+      return {query, response: this.$http.get(this.queryUrl + query)}
     },
 
     async handleSearchEvent ([_, valueInput, { query, response}]: [{}, string, QueryAndResponse]): Promise<void> {
