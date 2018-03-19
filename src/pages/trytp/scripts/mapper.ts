@@ -4,23 +4,23 @@ export interface Order {
     inverstor: string
 }
 
-export interface IParticipationOrder {
+export interface ParticipationOrder {
     alloc: number
     inverstor: string
 }
 
 export interface Participation {
     participant: string
-    orders: Array<IParticipationOrder>
+    orders: Array<ParticipationOrder>
     totalAlloc: number
 }
 
 interface ParticipantDict {
-    [orderBD: string]: Array<IParticipationOrder>
+    [orderBD: string]: Array<ParticipationOrder>
 }
 
 export function partitions(orders: Array<Order>): Array<Participation> {
-    let mapper : ParticipantDict = {}
+    let mapper: ParticipantDict = {}
 
     const a = orders
         .reduce((acc, curr, i, a, k = curr.orderBD) => {
@@ -37,7 +37,7 @@ export function partitions(orders: Array<Order>): Array<Participation> {
     ))
 }
 
-function convertToParticipationOrder(order: Order): IParticipationOrder {
+function convertToParticipationOrder(order: Order): ParticipationOrder {
     let { alloc, inverstor } = order
     return { alloc, inverstor }
 }
