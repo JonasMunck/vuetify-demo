@@ -2,13 +2,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Vuex from 'vuex'
-import App from './App'
+import App from './App.vue'
 import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import axios, { AxiosInstance } from 'axios'
 
-Vue.use(Vuex)
+// Vue.use(Vuex)
 Vue.use(Vuetify)
 
 Vue.config.productionTip = false
@@ -21,8 +21,8 @@ Vue.prototype.$http = axiosInstance
 
 
 // const store = require('./state').default
-import store from './state'
-Vue.prototype.$store = store
+// import store from './state'
+// Vue.prototype.$store = store
 // Vue.store = store
 
 /* eslint-disable no-new */
