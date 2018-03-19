@@ -1,17 +1,6 @@
 // src/vue-shims.d.ts
 
-import Vue from 'vue'
-import { AxiosInstance } from 'axios';
-
 declare module "*.vue" {
-  interface Vue {
-    $http: AxiosInstance
-  }
+  import Vue from 'vue'
   export default Vue
-}
-
-declare module 'vue/types/vue' {
-  interface Vue {
-    $http: AxiosInstance
-  }
 }
